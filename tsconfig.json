@@ -1,0 +1,31 @@
+{
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */ 
+    "compilerOptions": {
+    "sourceMap": true,
+    "target": "es5", // 사용할 특정 ECMAScript 버전 설정 ex> es5, es6
+    "lib": ["dom", "ES2015", "ES2016", "ES2017", "ES2018", "ES2019", "ES2020"],/* 컴파일에 포함될 라이브러리 파일 목록 */
+    "allowJs": true, /* 자바스크립트 파일 컴파일 허용 여부 */
+    "strict": true,  /* 모든 엄격한 타입-체킹 옵션 활성화 여부 */
+    "forceConsistentCasingInFileNames": true, /* 같은 파일에 대한 일관되지 않은 참조를 허용하지 않을 지 여부 */
+    "esModuleInterop": true,/* 모든 imports에 대한 namespace 생성을 통해 CommonJS와 ES Modules 간의 상호 운용성이 생기게할 지 여부, 'allowSyntheticDefaultImports'를 암시적으로 승인합니다. */
+    "module": "commonjs",
+    "isolatedModules": true,
+    "jsx": "preserve", /* JSX 코드 생성 설정: 'preserve', 'react-native', 혹은 'react' */
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./", /* non-absolute한 모듈 이름을 처리할 기준 디렉토리 */
+    "outDir": "./dist",
+    "moduleResolution": "node" /* 모듈 해석 방법 설정: 'node' (Node.js) 혹은 'classic */
+  },
+  "exclude": ["node_modules"],
+  "include": ["**/*.ts", "**/*.tsx"]
+}
+// $npm i -D typescript @types/react @types/react-dom
+
+
+//  compilerOptions, files, include, exclude, extends, compileOnSave 등의 속성을 작성할 수 있다
+//  compilerOptions : 이름 그대로 어떻게 컴파일 할 것인지 지정하는 속성 
+//  files : tsc 명령어 입력시 컴파일 대상 파일을 미리 지정해두는 속성
+//  include : files와 비슷한 동작을 하지만 파일이 아니라 폴더 경로를 지정한다.
+//  exclude : include와 반대로 컴파일하지 않을 폴더 경로를 지정한다
+//  extends : 상속 받을 다른 tsconfig 설정 파일 경로를 지정한다
+//  compileOnSave : 파일을 변경하면 바로 컴파일을 할 것인지 boolean값으로 지정한다. 에디터마다 동작하지 않을 수도 있다. vscode 2015, TypeScript 1.8.4 이상이어야 한다
